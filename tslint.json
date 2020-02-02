@@ -1,0 +1,301 @@
+{
+  "extends": [
+    "tslint-angular",
+    "tslint-consistent-codestyle",
+    "tslint-plugin-prettier",
+    "tslint-config-prettier"
+  ],
+  // "rulesDirectory": ["./node_modules/fp-ts/rules"], // for fp-ts "obsolete"
+  "rules": {
+    // "obsolete": true, // spots fp-ts obsolete code
+    "prettier": true,
+
+    /* tslint: */
+
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-module",
+      // "check-separator",
+      "check-rest-spread",
+      "check-type",
+      "check-typecast",
+      "check-type-operator",
+      "check-preblock"
+      // "check-postbrace"
+    ],
+
+    // "max-classes-per-file": [true, 3, "exclude-class-expressions"],
+    "max-classes-per-file": false,
+    "max-line-length": false,
+    "no-irregular-whitespace": true,
+    "no-empty": true,
+    "ban": [
+      true,
+      "trace",
+      "consoleLog",
+      "consoleLogPredicate",
+      "fdescribe",
+      "fit",
+      "xdescribe",
+      "xit"
+    ],
+    "ban-types": [
+      true,
+      ["Object", "Use object or any instead."],
+      ["String", "Use string instead."],
+      ["Boolean", "Use boolean instead."],
+      ["Debuggable", "Don't use debugging utilities."]
+    ],
+    "no-inferrable-types": true,
+    // "typedef": [
+    //   true,
+    //   "call-signature",
+    //   "arrow-call-signature",
+    //   "parameter",
+    //   "arrow-parameter",
+    //   "property-declaration",
+    //   "variable-declaration",
+    //   "member-variable-declaration",
+    //   "object-destructuring",
+    //   "array-destructuring"
+    // ],
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      },
+      {
+        "call-signature": "onespace",
+        "index-signature": "onespace",
+        "parameter": "onespace",
+        "property-declaration": "onespace",
+        "variable-declaration": "onespace"
+      }
+    ],
+    "no-string-literal": true,
+    "no-unused-expression": [true, "allow-fast-null-checks"],
+    "one-line": [
+      true,
+      "check-open-brace",
+      "check-catch",
+      "check-else",
+      "check-finally",
+      "check-whitespace"
+    ],
+    "quotemark": [true, "single", "avoid-template", "avoid-escape"],
+    "triple-equals": true,
+    "variable-name": [true, "check-format", "ban-keywords"],
+    "no-unnecessary-class": [
+      true,
+      "allow-constructor-only",
+      "allow-static-only",
+      "allow-empty-class"
+    ],
+    "member-access": [true, "no-public"],
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "public-static-field",
+          "public-static-method",
+          "public-instance-field",
+          "protected-instance-field",
+          "private-instance-field",
+          "public-constructor",
+          "public-instance-method",
+          "protected-static-field",
+          "protected-static-method",
+          "protected-constructor",
+          "protected-instance-method",
+          "private-static-field",
+          "private-static-method",
+          "private-constructor",
+          "private-instance-method"
+        ]
+      }
+    ],
+    "adjacent-overload-signatures": true,
+    "prefer-function-over-method": [true, "allow-public", "allow-protected"],
+    "no-invalid-this": [true, "check-function-in-method"],
+    "new-parens": true,
+    "prefer-method-signature": false,
+    "only-arrow-functions": [
+      true,
+      // "allow-declarations",
+      "allow-named-functions"
+    ],
+    "no-return-await": true,
+    "one-variable-per-declaration": [true, "ignore-for-loop"],
+    "no-unnecessary-initializer": true,
+    // "no-implicit-dependencies": [true, "dev"],
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "lowercase-last",
+        "named-imports-order": "case-insensitive",
+        "grouped-imports": true
+      }
+    ],
+    "no-require-imports": true,
+    "no-duplicate-imports": true,
+    "no-default-export": true,
+    "no-reference": true,
+    "no-angle-bracket-type-assertion": true,
+    "array-type": [true, "generic"],
+    "prefer-object-spread": true,
+    "object-literal-shorthand": true,
+    "object-literal-key-quotes": [true, "as-needed"],
+    "prefer-template": true,
+    "no-invalid-template-strings": true,
+    "binary-expression-operand-order": true,
+    "no-dynamic-delete": true,
+    "use-isnan": true,
+    "no-conditional-assignment": true,
+    "prefer-for-of": true,
+    "switch-default": true,
+    "no-duplicate-switch-case": true,
+    "no-unsafe-finally": true,
+    "cyclomatic-complexity": [true, 20],
+    "max-file-line-count": [true, 500],
+    "file-name-casing": [true, "kebab-case"],
+    "no-redundant-jsdoc": true,
+    "no-namespace": true,
+    "no-internal-module": true,
+    "no-console": [true, "log", "debug", "info", "time", "timeEnd", "trace"],
+    "no-sparse-arrays": true,
+    "ban-ts-ignore": true,
+    "no-magic-numbers": false,
+    "no-parameter-reassignment": true,
+    "no-unnecessary-type-assertion": true,
+    "await-promise": true,
+    "ban-comma-operator": true,
+    "function-constructor": true,
+    "no-arg": true,
+    // "no-floating-promises": true,
+    "no-for-in-array": true,
+    "no-inferred-empty-object-type": false,
+    "no-null-keyword": false,
+    "no-object-literal-type-assertion": true,
+    "no-this-assignment": true,
+    "no-unsafe-any": false,
+    "prefer-conditional-expression": true,
+    "restrict-plus-operands": true,
+    // "strict-boolean-expressions": [true, "allow-null-union", "allow-string"],
+    "strict-type-predicates": true,
+    "use-default-type-parameter": true,
+    "no-mergeable-namespace": true,
+    "prefer-readonly": true,
+    "jsdoc-format": true,
+    "match-default-export-name": false,
+    "no-unnecessary-callback-wrapper": true,
+    "no-unnecessary-qualifier": true,
+    "number-literal-format": true,
+    "return-undefined": true,
+    "switch-final-break": true,
+    "type-literal-delimiter": false,
+    "unnecessary-bind": true,
+
+    /* codelyzer: */
+
+    // DEPRECATED
+    // "angular-whitespace": [
+    //   true,
+    //   "check-interpolation",
+    //   //TODO: "check-pipe",
+    //   "check-semicolon"
+    // ],
+
+    "use-component-view-encapsulation": false,
+    "contextual-decorator": true,
+    "no-pipe-impure": true,
+    "template-no-negated-async": true,
+    "component-max-inline-declarations": true,
+    "no-attribute-decorator": true,
+    "no-conflicting-lifecycle": true,
+    "no-forward-ref": true,
+    "no-input-prefix": [true, "can", "is", "should"],
+    "no-lifecycle-call": true,
+    "no-output-native": true,
+    "no-output-rename": true,
+    "template-no-call-expression": false, // Disabled temporarily due to Angular ReactiveForms
+    "no-unused-css": true,
+    "prefer-output-readonly": true,
+    "template-conditional-complexity": true,
+    //TODO: remove "12" and set only to "true" after refactoring:
+    //  design-header.component, design-message.component
+    //FIXME: see this issue https://github.com/mgechev/codelyzer/issues/821
+    "template-cyclomatic-complexity": [false],
+    "template-use-track-by-function": true,
+    "use-pipe-decorator": true,
+    "component-selector": [true, "element", "app", "kebab-case"],
+    "directive-selector": [true, "attribute", "app", "camelCase"],
+    "use-component-selector": true,
+    "import-destructuring-spacing": true,
+    "no-queries-metadata-property": true,
+    "prefer-inline-decorator": [
+      true,
+      "HostListener",
+      "ViewChild",
+      "ViewChildren"
+    ],
+    "pipe-prefix": [true, "app"],
+
+    /* tslint-consistent-codestyle: */
+
+    "early-exit": true,
+    "naming-convention": [
+      true, // forbid leading and trailing underscores and enforce camelCase on EVERY name. will be overridden by subtypes if needed
+      {
+        "type": "default",
+        "format": "strictCamelCase",
+        "leadingUnderscore": "forbid",
+        "trailingUnderscore": "forbid"
+      },
+      // allow leading underscores for unused parameters, because `tsc --noUnusedParameters` will not flag underscore prefixed parameters
+      // all other rules (trailingUnderscore: forbid, format: camelCase) still apply
+      {
+        "type": "parameter",
+        "modifiers": "unused",
+        "leadingUnderscore": "allow"
+      },
+      // exclicitly disable the format check only for method toJSON
+      { "type": "method", "filter": "^toJSON$", "format": null },
+      // enforce PascalCase for classes, interfaces, enums, etc. Remember, there are still no underscores allowed.
+      { "type": "type", "format": "StrictPascalCase" },
+      // generic type parameters must start with "T"
+      // most of the time it will only be T, which is totally valid, because an empty string conforms to the PascalCase check
+      // By convention T, U and V are used for generics. You could enforce that with "regex": "^[TUV]$" and if you are care that much for performance, you could disable every other check by setting a falsy value
+      { "type": "genericTypeParameter", "prefix": "T" },
+      // enum members must be in PascalCase. Without this config, enumMember would inherit UPPER_CASE from public static const property
+      { "type": "enumMember", "format": "PascalCase" }
+    ],
+    "no-as-type-assertion": false,
+    "no-accessor-recursion": true,
+    "no-collapsible-if": true,
+    "no-else-after-return": true,
+    "no-unnecessary-else": true,
+    "no-return-undefined": true,
+    "no-static-this": true,
+    "no-unnecessary-type-annotation": false,
+    "no-unused": true,
+    "no-var-before-return": [true, "allow-destructuring"],
+    "object-shorthand-properties-first": true,
+    "prefer-const-enum": true,
+    "prefer-while": true,
+    "parameter-properties": [
+      true,
+      // "all-or-none",   // forces all or none of a constructors parameters to be parameter properties
+      "leading", // forces parameter properties to precede regular parameters
+      // "trailing",      // forces regular parameters to precede parameter properties
+      // "member-access", // forces an access modifier for every parameter property
+      "readonly" // forces all parameter properties to be readonly
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "extends": ["../tslint.json", "tslint-immutable"],
+  "rules": {
+    // tslint-immutable:
+
+    "no-var-keyword": true,
+    "no-parameter-reassignment": true,
+    "readonly-keyword": [true, "ignore-local", { "ignore-prefix": "mutable" }],
+    "readonly-array": false,
+    "no-array-mutation": [
+      true,
+      { "ignore-prefix": "mutable" },
+      "ignore-mutation-following-accessor"
+    ],
+    "no-let": [true, "ignore-local", { "ignore-prefix": "mutable" }],
+    "no-delete": true,
+    "no-object-mutation": [true, { "ignore-prefix": ["this", "mutable"] }],
+    "no-method-signature": true,
+    "no-this": false,
+    "no-class": false,
+    "no-mixed-interface": true,
+    // "no-expression-statement": [
+    //   true,
+    //   {
+    //     "ignore-prefix": [
+    //       "this",
+    //       "throw",
+    //       "console.",
+    //       "storiesOf",
+    //       "mutable",
+    //       "sideEffect",
+    //       "document.",
+    //       "tapOption",
+    //       "tapNullable",
+    //       "tapPredicate",
+    //       "super"
+    //     ]
+    //   }
+    // ],
+    "no-if-statement": true,
+    "no-loop-statement": true,
+    "no-try": true
+  }
+}
