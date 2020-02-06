@@ -20,7 +20,7 @@ export class CountViewerComponent implements OnInit {
 
   get rendered() {
     console.log(`${this.constructor.name} rendered`)
-    return `${this.constructor.name}`
+    return `${this.constructor.name} - OnPush`
   }
 
   ngOnInit() {

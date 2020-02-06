@@ -1,7 +1,9 @@
 <div class="with-red-border">
   <pre>{{ rendered }}</pre>
 
-  <pre>mutableCount: {{ mutableCount }}</pre>
+  <button type="button" (click)="onDecrementClick()">+</button>
+  <button type="button" (click)="onIncrementClick()">-</button>
 
+  <pre>mutableCount: {{ mutableCount }}</pre>
   <!-- <app-count-viewer [count]="count$ | async"></app-count-viewer> -->
 </div>
