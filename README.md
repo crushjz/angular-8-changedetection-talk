@@ -1,6 +1,6 @@
 # Angular 8 - Change Detection talk
 
-Slides: ...
+Slides [HERE](./slides/Angular%20ChangeDetection%20-%20The%20good,%20the%20bad,%20and%20the%20ugly.pdf 'Angular 8 - Change Detection Slides').
 
 ## Run the demo
 
